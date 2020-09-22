@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <script type="text/javascript">
+        function loadPage(){
+            var table = document.getElementById("table1");
+        
+            for (var i = 0; i < table.rows.length; i++) {
+                // if (i === 0 ){
+                //     continue;
+                // }
+                table.rows[i].onclick = function () {
+                    tableClick(this);
+                }; 
+            }
+        }  
+
+        function tableClick(tableRow) {
+            var name = tableRow.cells[0].innerHTML;
+            var count = +tableRow.cells[1].innerHTML;
+            var price = +tableRow.cells[2].innerHTML;
+        }
+    </script>
+</head>
+<body onload=loadPage()>
+    <div>
+    <h1>Store</h1>
+    <table id="table1">
+        <tr>
+          <th name="Name">Name</th>
+          <th name="Count">Quantity</th>
+          <th name="Price">Age</th>
+        </tr>
+        <tr>
+            <th name="Name">Товар1</th>
+            <th name="Count">10</th>
+            <th name="Price">250</th>
+          </tr>
+          <tr>
+            <th name="Name">Name</th>
+            <th name="Count">Quantity</th>
+            <th name="Price">Age</th>
+          </tr>
+      </table>
+    </div>
+    <div>
+        <h1>Stock</h1>
+        <table id="table2">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+          </table>
+    </div>
+</body>
